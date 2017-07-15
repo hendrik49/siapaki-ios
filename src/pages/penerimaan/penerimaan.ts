@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ViewController } from 'ionic-angular';
 
 import { PenerimaanKegiatanUsahaPage } from '../penerimaan-kegiatan-usaha/penerimaan-kegiatan-usaha';
 import { PenerimaanPemberiPinjamanPage } from '../penerimaan-pemberi-pinjaman/penerimaan-pemberi-pinjaman';
@@ -11,7 +11,7 @@ import { PenerimaanPemilikPage } from '../penerimaan-pemilik/penerimaan-pemilik'
 })
 export class PenerimaanPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public viewCtrl: ViewController,) {
 
   }
 

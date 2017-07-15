@@ -16,7 +16,7 @@ export class PengeluaranPage {
   }
 
   luaranKegiatanUsaha(){
-    this.navCtrl.setRoot(PengeluaranKegiatanUsahaPage);
+    this.navCtrl.push(PengeluaranKegiatanUsahaPage);
   }
   luaranPemberPinjaman(){
     this.navCtrl.push(PengeluaranPemberiPinjamanPage);
