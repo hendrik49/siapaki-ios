@@ -1,14 +1,4 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title style="text-align:center">Transaksi</ion-title>
-    <ion-buttons right>
-      <button ion-button icon-only color="over">
-        <ion-icon name="more"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-<ion-tabs tabsPlacement="top">
+<ion-tabs tabsPlacement="top" #myTabs>
   <ion-tab [root]="tab1Root" tabTitle="Penerimaan"></ion-tab>
   <ion-tab [root]="tab2Root" tabTitle="Pengeluaran"></ion-tab>
  </ion-tabs>

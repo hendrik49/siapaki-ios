@@ -3,8 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
+import { FormpenjualanPage } from '../pages/formpenjualan/formpenjualan';
 import { PengeluaranPage } from '../pages/contact/contact';
-import { PenerimaanPage } from '../pages/home/home';
+import { PenerimaanPage } from '../pages/penerimaan/penerimaan';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PenerimaanKegiatanUsahaPage } from '../pages/penerimaan-kegiatan-usaha/penerimaan-kegiatan-usaha';
 import { PenerimaanPemberiPinjamanPage } from '../pages/penerimaan-pemberi-pinjaman/penerimaan-pemberi-pinjaman';
@@ -26,7 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PengeluaranPemilikPage,
     PenerimaanKegiatanUsahaPage,
     PenerimaanPemilikPage,
-    PenerimaanPemberiPinjamanPage
+    PenerimaanPemberiPinjamanPage,
+    FormpenjualanPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PengeluaranPemilikPage,
     PenerimaanKegiatanUsahaPage,
     PenerimaanPemilikPage,
-    PenerimaanPemberiPinjamanPage
+    PenerimaanPemberiPinjamanPage,
+    FormpenjualanPage
   ],
   providers: [
     StatusBar,

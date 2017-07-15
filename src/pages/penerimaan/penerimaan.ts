@@ -6,8 +6,8 @@ import { PenerimaanPemberiPinjamanPage } from '../penerimaan-pemberi-pinjaman/pe
 import { PenerimaanPemilikPage } from '../penerimaan-pemilik/penerimaan-pemilik';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-penerimaan',
+  templateUrl: 'penerimaan.html'
 })
 export class PenerimaanPage {
 
