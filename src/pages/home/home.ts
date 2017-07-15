@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
 
 /**
  * Generated class for the HomePage page.
@@ -21,5 +22,10 @@ export class HomePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }
+
+  transaksi(){
+    this.navCtrl.push(TabsPage);
+  }
+
 
 }

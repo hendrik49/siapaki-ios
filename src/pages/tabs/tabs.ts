@@ -10,22 +10,10 @@ export class TabsPage {
 
   tab1Root = PenerimaanPage;
   tab2Root = PengeluaranPage;
-  tabBarElement;
 
 constructor() {
-    this.tabBarElement = document.querySelector('#tabs ion-tabbar-section');
 
   }
-
-onPageDidEnter()
-    {
-        this.tabBarElement.style.display = 'none';
-    }
-
-    onPageWillLeave()
-    {
-        this.tabBarElement.style.display = 'block';
-    }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PenerimaanKegiatanUsahaPage');
