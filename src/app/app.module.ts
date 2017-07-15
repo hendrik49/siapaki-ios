@@ -4,7 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { FormpenjualanPage } from '../pages/formpenjualan/formpenjualan';
-import { PengeluaranPage } from '../pages/contact/contact';
+import { PengeluaranPage } from '../pages/pengeluaran/pengeluaran';
 import { PenerimaanPage } from '../pages/penerimaan/penerimaan';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PenerimaanKegiatanUsahaPage } from '../pages/penerimaan-kegiatan-usaha/penerimaan-kegiatan-usaha';

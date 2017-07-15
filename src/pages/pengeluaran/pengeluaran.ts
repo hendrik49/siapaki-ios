@@ -6,8 +6,8 @@ import { PengeluaranPemberiPinjamanPage } from '../pengeluaran-pemberi-pinjaman/
 import { PengeluaranPemilikPage } from '../pengeluaran-pemilik/pengeluaran-pemilik';
 
 @Component({
-  selector: 'page-contact',
-  templateUrl: 'contact.html'
+  selector: 'page-pengeluaran',
+  templateUrl: 'pengeluaran.html'
 })
 export class PengeluaranPage {
 
