@@ -12,62 +12,62 @@
 
 </ion-header>
 
-
 <ion-content padding>
+<form #signupForm="ngForm" novalidate>
   <ion-list>
     <ion-item>
-      <ion-input type="text" placeholder="Nama Barang*"></ion-input>
+      <ion-input type="text" [(ngModel)]="penjualan.namabarang" name="namabarang" placeholder="Nama Barang*"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="number" placeholder="Harga*"></ion-input>
+      <ion-input type="number" [(ngModel)]="penjualan.hargabarang" name="hargabarang" placeholder="Harga*"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="number" placeholder="Jumlah Barang*"></ion-input>
+      <ion-input type="number" [(ngModel)]="penjualan.jumlahbarang" name="jumlahbarang" placeholder="Jumlah Barang*"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="number" placeholder="Total Harga*"></ion-input>
+      <ion-input type="number" [(ngModel)]="penjualan.totalharga" name="totalharga" placeholder="Total Harga*"></ion-input>
     </ion-item>
       <ion-item>
         <ion-label style="text-align:center"> Metode Pembayaran </ion-label>
       </ion-item>
+        </ion-list>
 
-      <ion-row radio-group style="text-align:center" [(ngModel)]="autoManufacturers">
+</form>
 
+      <ion-row radio-group style="text-align:center" [(ngModel)]="penjualan.metodepembayaran" >
         <ion-col>
           <ion-label>Tunai</ion-label>
-          <ion-radio value="Tunai"></ion-radio>
+          <ion-radio  value="Tunai"></ion-radio>
         </ion-col>
-
         <ion-col>
           <ion-label>Transfer</ion-label>
           <ion-radio value="Transfer"></ion-radio>
         </ion-col>
-
         <ion-col>
           <ion-label>Giro</ion-label>
           <ion-radio value="Giro"></ion-radio>
         </ion-col>
       </ion-row>
-    
+    <form>
     <ion-item>
-      <ion-input type="text" placeholder="Pelanggan*"></ion-input>
+      <ion-input type="text" [(ngModel)]="penjualan.pelanggan" name="pelanggan" placeholder="pelanggan*"></ion-input>
     </ion-item>
+    </form>
 
     <ion-item>
       <ion-label style="padding-left:10px">Tanggal</ion-label>
-      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+      <ion-datetime [(ngModel)]="penjualan.tanggal" name="tanggal" displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
     </ion-item>
-
+<form>
     <ion-item>
-      <ion-input type="text" placeholder="Catatan"></ion-input>
+      <ion-input [(ngModel)]="penjualan.catatan" name="catatan" type="text" placeholder="Catatan"></ion-input>
     </ion-item>
+</form>
 
-
-  </ion-list>
 </ion-content>
 
 <ion-footer no-border>
-  <button color="greens" ion-button full>
+  <button type="submit" (click)="onSignup(signupForm)" color="greens" ion-button full>
       Simpan
     </button>
 </ion-footer>
