@@ -1,0 +1,141 @@
+<!--
+  Generated template for the SegmentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title style="text-align:center">TRANSAKSI</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+  <ion-segment [(ngModel)]="pet">
+    <ion-segment-button value="penerimaan">
+      Penerimaan
+    </ion-segment-button>
+    <ion-segment-button value="pengeluaran">
+      Pengeluaran
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="pet">
+  <ion-list *ngSwitchCase="'penerimaan'">
+    <ion-card class="css-card" style="background-color:darkseagreen"  (click)="nerimaKegiatanUsaha()">
+      <!-- <ion-card-header>
+        PENERIMAAN DANA DARI KEGIATAN USAHA
+      </ion-card-header> -->
+      <ion-card-content>
+        <ion-row>
+        <ion-col col-8>
+        <b> PENJUALAN </b>
+        <br><br>
+        Penerimaan kas, giro, tabungan, dan deposito yag berasal dari kegiatan usaha
+        </ion-col>
+      <ion-col>
+        <img class="css-img" src="assets/img/img_penerimaan_kegiatan_usaha.png">
+      </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="css-card" style="background-color:gainsboro"  (click)="nerimaPemberPinjaman()">
+      <!-- <ion-card-header>
+        PENERIMAAN DANA DARI KEGIATAN USAHA
+      </ion-card-header> -->
+      <ion-card-content>
+        <ion-row>
+        <ion-col col-8>
+        <b>  UTANG </b>
+        <br><br>
+        Penerimaan kas, giro, tabungan, dan deposito yag berasal dari pemberi pinjaman
+        </ion-col>
+      <ion-col>
+        <img class="css-img" src="assets/img/img_penerimaan_pemberi_pinjaman.png">
+      </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="css-card" style="background-color:darksalmon"  (click)="nerimaPemilik()">
+      <!-- <ion-card-header>
+        PENERIMAAN DANA DARI PEMILIK
+      </ion-card-header> -->
+      <ion-card-content>
+        <ion-row>
+        <ion-col col-8>
+        <b>  MODAL </b>
+        <br><br>
+        Penerimaan kas, giro, tabungan, dan deposito yag berasal dari pemilik usaha
+        </ion-col>
+      <ion-col>
+        <img class="css-img" src="assets/img/img_penerimaan_pemilik.png">
+      </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'pengeluaran'">
+    <ion-card style="background-color:darkseagreen"  class="css-card">
+  <!-- <ion-card-header>
+    PENERIMAAN DANA DARI KEGIATAN USAHA
+  </ion-card-header> -->
+  <ion-card-content>
+    <ion-row>
+    <ion-col col-8>
+     <b> PEMBELIAN BIBIT </b>
+      <br><br>
+    Penerimaan kas, giro, tabungan, dan deposito yag berasal dari kegiatan usaha
+    </ion-col>
+  <ion-col>
+    <img class="css-img" src="assets/img/img_pengeluaran_kegiatan_usaha.png">
+  </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>
+
+<ion-card style="background-color:bisque"  class="css-card">
+  <!-- <ion-card-header>
+    PENERIMAAN DANA DARI KEGIATAN USAHA
+  </ion-card-header> -->
+  <ion-card-content>
+    <ion-row>
+    <ion-col col-8>
+    <b>  KEWAJIBAN </b>
+    <br><br>
+    Penerimaan kas, giro, tabungan, dan deposito yag berasal dari pemberi pinjaman
+    </ion-col>
+  <ion-col>
+    <img class="css-img" src="assets/img/img_pengeluaran_pemberipinjaman.png">
+  </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>
+
+<ion-card style="background-color:burlywood"  class="css-card">
+  <!-- <ion-card-header>
+    PENERIMAAN DANA DARI PEMILIK
+  </ion-card-header> -->
+  <ion-card-content>
+    <ion-row>
+    <ion-col col-8>
+   <b>   BIAYA </b>
+    <br><br>
+    Penerimaan kas, giro, tabungan, dan deposito yag berasal dari pemilik usaha
+    </ion-col>
+  <ion-col>
+    <img class="css-img" src="assets/img/img_pengeluaran_pemilik.png">
+  </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>
+  </ion-list>
+</div>
+</ion-content>

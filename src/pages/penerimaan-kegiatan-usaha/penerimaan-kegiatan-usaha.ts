@@ -12,31 +12,25 @@ import { FormpenjualanPage } from '../formpenjualan/formpenjualan'
   selector: 'page-penerimaan-kegiatan-usaha',
   templateUrl: 'penerimaan-kegiatan-usaha.html',
 })
+
 export class PenerimaanKegiatanUsahaPage {
-  tabBarElement;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.tabBarElement = document.querySelector('#tabs ion-tabbar-section');
 
   }
-onPageDidEnter()
-    {
 
-        this.tabBarElement.style.display = 'none';
+  onPageDidEnter() {
 
-    }
+  }
 
-    onPageWillLeave()
-    {
+  onPageWillLeave() {
 
-        this.tabBarElement.style.display = 'block';
-
-    }
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PenerimaanKegiatanUsahaPage');
   }
 
-  goToForm(){
+  goToForm() {
     this.navCtrl.push(FormpenjualanPage);
   }
 

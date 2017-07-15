@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
-
+import { SegmentPage } from '../segment/segment';
 /**
  * Generated class for the HomePage page.
  *
@@ -24,7 +24,7 @@ export class HomePage {
   }
 
   transaksi(){
-    this.navCtrl.push(TabsPage);
+    this.navCtrl.push(SegmentPage);
   }
 
 
