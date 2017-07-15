@@ -6,8 +6,8 @@
 -->
 <ion-header>
 
-  <ion-navbar color="secondary">
-    <ion-title>PENJUALAN HASIL PERTANIAN TUNAI </ion-title>
+  <ion-navbar>
+    <ion-title> PENJUALAN HASIL PERTANIAN TUNAI </ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -27,28 +27,28 @@
     <ion-item>
       <ion-input type="number" placeholder="Total Harga*"></ion-input>
     </ion-item>
-
-    <ion-list radio-group [(ngModel)]="autoManufacturers">
-      <ion-list-header>
-        Metode Pembayaran
-      </ion-list-header>
-
       <ion-item>
-        <ion-label>Tunai</ion-label>
-        <ion-radio value="Tunai"></ion-radio>
+        <ion-label style="text-align:center"> Metode Pembayaran </ion-label>
       </ion-item>
 
-      <ion-item>
-        <ion-label>Transfer</ion-label>
-        <ion-radio value="Transfer"></ion-radio>
-      </ion-item>
+      <ion-row radio-group style="text-align:center" [(ngModel)]="autoManufacturers">
 
-      <ion-item>
-        <ion-label>Giro</ion-label>
-        <ion-radio value="Giro"></ion-radio>
-      </ion-item>
-    </ion-list>  
+        <ion-col>
+          <ion-label>Tunai</ion-label>
+          <ion-radio value="Tunai"></ion-radio>
+        </ion-col>
 
+        <ion-col>
+          <ion-label>Transfer</ion-label>
+          <ion-radio value="Transfer"></ion-radio>
+        </ion-col>
+
+        <ion-col>
+          <ion-label>Giro</ion-label>
+          <ion-radio value="Giro"></ion-radio>
+        </ion-col>
+      </ion-row>
+    
     <ion-item>
       <ion-input type="text" placeholder="Pelanggan*"></ion-input>
     </ion-item>
@@ -67,7 +67,7 @@
 </ion-content>
 
 <ion-footer no-border>
-    <button color="greens" ion-button full>
+  <button color="greens" ion-button full>
       Simpan
     </button>
 </ion-footer>

@@ -14,8 +14,10 @@ import { PenerimaanPemilikPage } from '../penerimaan-pemilik/penerimaan-pemilik'
   templateUrl: 'segment.html',
 })
 export class SegmentPage {
+  pet: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.pet = "penerimaan";
   }
 
   ionViewDidLoad() {
