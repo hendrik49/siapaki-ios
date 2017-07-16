@@ -28,23 +28,20 @@ export class HomePage {
     console.log('ionViewDidLoad HomePage');
   }
 
-  ionViewDidEnter() {
+  async ionViewDidEnter() {
     const connection = getConnectionManager().get();
-
     let photo = new Perusahaan();
-    photo.name = "Me and Bears";
-    photo.description = "I am near polar bears";
-    photo.fileName = "img_sektor_pertanian.jpg";
+    photo.name = "PT Didoks";
+    photo.description = "Perusahaan Pertanian";
+    photo.fileName = "img_sektor_pertanian.png";
     photo.type = "pertanian";
     photo.isPublished = true;
 
     let photoRepository = connection.getRepository(Perusahaan);
-
     photoRepository.persist(photo);
-    console.log("Photo has been saved");
 
-    let savedPhotos = photoRepository.find();
-    console.log("All photos from the db: ", savedPhotos);
+    this.perusahaan = await photoRepository.find();
+    console.log("All photos from the db: ", this.perusahaan);  
   }
 
   transaksi() {

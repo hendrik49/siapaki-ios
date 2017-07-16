@@ -30,15 +30,14 @@ export class MyApp {
       driver: {
         type: "websql",
         host: "localhost",
-        database: "apik"
+        database: "siapikdb"
       },
       entities: [
         Perusahaan
       ],
       autoSchemaSync: true,
     }).then(async connection => {
-      console.log("All enitty are loaded from the db: ");
-
+      console.log("All entities are loaded ");
     });
     }
 }
