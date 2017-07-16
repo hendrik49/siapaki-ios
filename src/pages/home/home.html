@@ -9,38 +9,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-card class="css-card" style="background-color:darkseagreen"  (click)="transaksi()">
+<ion-content  padding>
+  <ion-card *ngFor="let usaha of perusahaan" class="css-card" style="background-color:darkseagreen"  (click)="transaksi()">
   <!-- <ion-card-header>
     PENERIMAAN DANA DARI KEGIATAN USAHA
   </ion-card-header> -->
   <ion-card-content>
     <ion-row>
     <ion-col col-8>
-     <b> PT MAJU BERKAH </b>
+     <b> {{ usaha.name}} </b>
       <br><br>
-      Pertanian
+      {{ usaha.type}}
     </ion-col>
   <ion-col>
-    <img class="css-img" src="assets/img/img_sektor_pertanian.png">
-  </ion-col>
-    </ion-row>
-  </ion-card-content>
-</ion-card>
-
-<ion-card style="background-color:burlywood"  class="css-card">
-  <!-- <ion-card-header>
-    PENERIMAAN DANA DARI KEGIATAN USAHA
-  </ion-card-header> -->
-  <ion-card-content>
-    <ion-row>
-    <ion-col col-8>
-    <b>  PT SINAR INDAH </b>
-    <br><br>
-    TRAVEL
-    </ion-col>
-  <ion-col>
-    <img class="css-img" src="assets/img/img_sektor_jasa.png">
+    <img class="css-img" src="assets/img/{{ usaha.fileName}}">
   </ion-col>
     </ion-row>
   </ion-card-content>
