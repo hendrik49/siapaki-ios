@@ -1,3 +1,7 @@
+import "reflect-metadata";
+import { getConnectionManager } from "ionic-orm";
+import { Penjualan } from "../../entity/Penjualan";
+
 import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { NgForm } from "@angular/forms/forms";
@@ -26,7 +30,7 @@ export class FormpenjualanPage {
     console.log('ionViewDidLoad FormpenjualanPage');
   }
 
-     onSignup(form: NgForm) {
+     async onSignup(form: NgForm) {
       this.submitted = true;
       let loading = this.loadingCtrl.create({
           content: 'Tunggu sebentar...'
@@ -34,19 +38,21 @@ export class FormpenjualanPage {
 
       if (form.valid) {
         loading.present();
+        const connection = getConnectionManager().get();
+    
+        let order = new Penjualan();
+          order.namabarang= this.penjualan.namabarang,
+          order.hargabarang= Number(this.penjualan.hargabarang),
+          order.jumlahbarang=Number(this.penjualan.jumlahbarang),
+          order.totalharga= Number(this.penjualan.totalharga),
+          order.metodepembayaran= this.penjualan.metodepembayaran,
+          order.pelanggan= this.penjualan.pelanggan,
+          order.tanggal= this.penjualan.tanggal,
+          order.catatan= this.penjualan.catatan
 
-        let input = {
-          namabarang: this.penjualan.namabarang,
-          hargabarang: this.penjualan.hargabarang,
-          jumlahbarang: this.penjualan.jumlahbarang,
-          totalharga: this.penjualan.totalharga,
-          metodepembayaran: this.penjualan.metodepembayaran,
-          pelanggan: this.penjualan.pelanggan,
-          tanggal: this.penjualan.tanggal,
-          catatan: this.penjualan.catatan
-        };
-        console.log(input);
-
+        let photoRepository = connection.getRepository(Penjualan);
+        await photoRepository.persist(order);
+        this.showAlert("success");
         loading.dismiss();
 
     }

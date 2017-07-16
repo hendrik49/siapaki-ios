@@ -1,6 +1,7 @@
 import "reflect-metadata";
 import { createConnection } from "ionic-orm";
 import { Perusahaan } from "../entity/Perusahaan";
+import { Penjualan } from "../entity/Penjualan";
 
 
 import { Component } from '@angular/core';
@@ -33,11 +34,31 @@ export class MyApp {
         database: "siapikdb"
       },
       entities: [
-        Perusahaan
+        Perusahaan,
+        Penjualan
       ],
       autoSchemaSync: true,
     }).then(async connection => {
-      console.log("All entities are loaded ");
+          let photo = new Perusahaan();
+          photo.name = "PT Didoks";
+          photo.description = "Perusahaan Pertanian";
+          photo.fileName = "img_sektor_pertanian.png";
+          photo.type = "pertanian";
+          photo.isPublished = true;
+
+          let photoRepository = connection.getRepository(Perusahaan);
+          await photoRepository.persist(photo);
+
+          photo = new Perusahaan();
+          photo.name = "PT Didok B";
+          photo.description = "Perusahaan Pertanian";
+          photo.fileName = "img_sektor_pertanian.png";
+          photo.type = "pertanian";
+          photo.isPublished = true;
+
+          await photoRepository.persist(photo);
+          let data =await photoRepository.find();
+          console.log("All entities loaded",data);
     });
     }
 }

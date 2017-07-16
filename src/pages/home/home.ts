@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import { getConnectionManager } from "ionic-orm";
-import { Perusahaan } from "../../entity/Perusahaan";
+import { Penjualan } from "../../entity/Penjualan";
 
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
@@ -24,21 +24,10 @@ export class HomePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
-  }
-
   async ionViewDidEnter() {
+    console.log('ionViewDidLoad HomePage');
     const connection = getConnectionManager().get();
-    let photo = new Perusahaan();
-    photo.name = "PT Didoks";
-    photo.description = "Perusahaan Pertanian";
-    photo.fileName = "img_sektor_pertanian.png";
-    photo.type = "pertanian";
-    photo.isPublished = true;
-
-    let photoRepository = connection.getRepository(Perusahaan);
-    photoRepository.persist(photo);
+    let photoRepository = connection.getRepository(Penjualan);
 
     this.perusahaan = await photoRepository.find();
     console.log("All photos from the db: ", this.perusahaan);  

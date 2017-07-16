@@ -10,19 +10,39 @@
 </ion-header>
 
 <ion-content  padding>
-  <ion-card *ngFor="let usaha of perusahaan" class="css-card" style="background-color:darkseagreen"  (click)="transaksi()">
+  <ion-card  class="css-card" style="background-color:darkseagreen"  (click)="transaksi()">
   <!-- <ion-card-header>
     PENERIMAAN DANA DARI KEGIATAN USAHA
   </ion-card-header> -->
   <ion-card-content>
     <ion-row>
     <ion-col col-8>
-     <b> {{ usaha.name}} </b>
+     <b> PT Didok Ganteng </b>
       <br><br>
-      {{ usaha.description}}
+      Pertanian
     </ion-col>
   <ion-col>
-    <img class="css-img" src="assets/img/{{ usaha.fileName}}">
+    <img class="css-img" src="assets/img/img_sektor_pertanian.png">
+  </ion-col>
+    </ion-row>
+  </ion-card-content>
+</ion-card>
+
+<ion-label style="text-align:center">Data Penjualan</ion-label>
+
+<ion-card *ngFor="let usaha of perusahaan" class="css-card" style="background-color:darkseagreen"  (click)="transaksi()">
+  <!-- <ion-card-header>
+    PENERIMAAN DANA DARI KEGIATAN USAHA
+  </ion-card-header> -->
+  <ion-card-content>
+    <ion-row>
+    <ion-col col-8>
+     <b> {{ usaha.namabarang}} </b>
+      <br><br>
+      {{ usaha.jumlahbarang}}
+    </ion-col>
+  <ion-col>
+    <img class="css-img" src="assets/img/img_sektor_pertanian.png">
   </ion-col>
     </ion-row>
   </ion-card-content>
