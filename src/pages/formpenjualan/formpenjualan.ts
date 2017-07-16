@@ -34,7 +34,6 @@ export class FormpenjualanPage {
 
       if (form.valid) {
         loading.present();
-        let contentHeader = new Headers({"Content-Type": "application/x-www-form-urlencoded"});
 
         let input = {
           namabarang: this.penjualan.namabarang,
