@@ -40,6 +40,7 @@
         "reflect-metadata": "^0.1.10",
         "rxjs": "5.4.0",
         "sqlite": "^2.8.0",
+        "sqlite3": "^3.1.8",
         "sw-toolbox": "3.6.0",
         "zone.js": "0.8.12"
     },
